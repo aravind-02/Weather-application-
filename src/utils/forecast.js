@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(body.error){
             callback('coordinates are invalid',undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions+ ". The current temperature is "+ body.current.temperature + ' degrees and it feels like ' +body.current.feelslike +' degree')
+            callback(undefined,body.current.weather_descriptions+ ". The current temperature is "+ body.current.temperature + ' degrees and it feels like ' +body.current.feelslike +' degree with humidity of '+ body.current.humidity +'%')
         }
     })
 }
